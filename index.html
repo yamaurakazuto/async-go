@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <button id="btn">Search</button>
+
+  <script>
+    const btn = document.getElementById("btn");
+
+    btn.addEventListener("click", () => {
+      fetch("http://localhost:8080/search")
+        .then(res => res.text())
+        .then(text => console.log("response:", text))
+        .catch(err => console.log("error:", err));
+    });
+  </script>
+</body>
+</html>
