@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banking App</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>銀行アプリ</h1>
+        <nav class="nav">
+          <button data-view="login" class="nav-button is-active">ログイン</button>
+          <button data-view="balance" class="nav-button">残高確認</button>
+          <button data-view="transfer" class="nav-button">振り込み</button>
+        </nav>
+      </header>
+
+      <section id="view-login" class="card">
+        <h2>ログイン</h2>
+        <form id="login-form" class="form">
+          <label>
+            メールアドレス
+            <input type="email" name="email" placeholder="example@example.com" required />
+          </label>
+          <label>
+            パスワード
+            <input type="password" name="password" placeholder="******" required />
+          </label>
+          <button type="submit" class="primary">ログイン</button>
+        </form>
+        <p id="login-message" class="message"></p>
+      </section>
+
+      <section id="view-balance" class="card is-hidden">
+        <h2>残高確認</h2>
+        <div class="balance-box">
+          <p class="label">現在の残高</p>
+          <p id="balance-value" class="balance">¥0</p>
+        </div>
+        <button id="refresh-balance" class="secondary">更新</button>
+      </section>
+
+      <section id="view-transfer" class="card is-hidden">
+        <h2>振り込み</h2>
+        <form id="transfer-form" class="form">
+          <label>
+            振込先口座番号
+            <input type="text" name="toAccountNumber" placeholder="123-456-789" required />
+          </label>
+          <label>
+            金額
+            <input type="number" name="amount" min="1" step="1" required />
+          </label>
+          <button type="submit" class="primary">振り込み実行</button>
+        </form>
+        <p id="transfer-message" class="message"></p>
+      </section>
+    </main>
+
+    <script type="module" src="/dist/app.js"></script>
+  </body>
+</html>
