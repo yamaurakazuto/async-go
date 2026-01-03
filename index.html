@@ -1,17 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>口座ログイン</title>
+</head>
 <body>
-  <button id="btn">Search</button>
+  <h1>口座ログイン</h1>
 
-  <script>
-    const btn = document.getElementById("btn");
+  <form method="post" action="/login">
+    <div>
+      <label for="username">ユーザーID</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        autocomplete="username"
+        required
+      />
+    </div>
 
-    btn.addEventListener("click", () => {
-      fetch("http://localhost:8080/search")
-        .then(res => res.text())
-        .then(text => console.log("response:", text))
-        .catch(err => console.log("error:", err));
-    });
-  </script>
+    <div>
+      <label for="password">パスワード</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        autocomplete="current-password"
+        required
+      />
+    </div>
+
+    <input type="hidden" name="csrf_token" value="{{.CSRF}}">
+
+    <button type="submit">ログイン</button>
+  </form>
 </body>
 </html>
