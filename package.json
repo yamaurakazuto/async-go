@@ -1,0 +1,10 @@
+{
+  "name": "banking-frontend",
+  "private": true,
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}

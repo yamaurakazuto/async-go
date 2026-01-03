@@ -1,0 +1,118 @@
+:root {
+  color-scheme: light;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  background: #f4f6fb;
+  color: #1f2a44;
+}
+
+body {
+  margin: 0;
+  background: #f4f6fb;
+}
+
+.container {
+  max-width: 720px;
+  margin: 32px auto;
+  padding: 24px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nav-button {
+  border: 1px solid #c7d0e0;
+  background: #ffffff;
+  padding: 10px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.nav-button.is-active {
+  background: #1d4ed8;
+  color: #ffffff;
+  border-color: #1d4ed8;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(31, 42, 68, 0.08);
+  margin-bottom: 20px;
+}
+
+.card.is-hidden {
+  display: none;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  font-weight: 600;
+}
+
+input {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #c7d0e0;
+  font-size: 16px;
+}
+
+button.primary,
+button.secondary {
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button.primary {
+  background: #1d4ed8;
+  color: #ffffff;
+}
+
+button.secondary {
+  background: #e2e8f0;
+  color: #1f2a44;
+}
+
+.balance-box {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.balance {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.message {
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+.message.is-error {
+  color: #dc2626;
+}
+
+.message.is-success {
+  color: #16a34a;
+}
